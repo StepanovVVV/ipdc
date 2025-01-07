@@ -1,0 +1,40 @@
+.partners
+    padding-top: rem-calc(78)
+    padding-bottom: rem-calc(154)
+    @include respond(medium)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    @include respond(small)
+        padding-top: rem-calc(60)
+        padding-bottom: rem-calc(60)
+    &__title
+        font-family: serif
+        font-size: rem-calc(23)
+        font-weight: 700
+        line-height: 1
+        color: $color-2
+        text-align: center
+    &__slider
+        margin-top: rem-calc(84)
+        @include respond(medium)
+            margin-top: rem-calc(60)
+        @include respond(small)
+            margin-top: rem-calc(40)
+        .slick-track
+            display: flex
+            gap: rem-calc(142)
+            @include respond(medium)
+                display: block
+    &__img
+        max-width: rem-calc(186)
+    &__slick
+        .slick-dots
+            flex-direction: row
+            bottom: rem-calc(-81)
+            height: rem-calc(13)
+            top: auto
+            right: auto
+            width: 100%
+            @include respond(medium)
+                bottom: rem-calc(-30)
+

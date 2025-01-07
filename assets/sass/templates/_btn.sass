@@ -1,0 +1,58 @@
+.btn
+    &__wrap
+        display: inline-block
+        font-size: rem-calc(12)
+        line-height: 1.66666666667
+        font-weight: 700
+        letter-spacing: rem-calc(2)
+        color: $color-6
+        padding: rem-calc(8 20)
+        background-color: $color-7
+        border-radius: rem-calc(4)
+        transition: all .3s ease 0s
+        &:hover 
+            background-color: $color-8
+    &-2
+        .btn__wrap
+            display: flex
+            align-items: center
+            gap: rem-calc(14)
+            padding: unset
+            background-color: transparent
+            max-width: max-content
+            &:hover 
+                opacity: .5
+        .btn__name
+            font-size: rem-calc(19)
+            line-height: 1.36842105263
+            font-weight: 500
+            color: $color-7
+        .btn__icon
+            width: rem-calc(14)
+            height: rem-calc(15)
+            img
+                height: 100%
+
+.btn-3
+    background-color: transparent
+    border: rem-calc(1) solid $color-7
+    color: $color-7
+    font-weight: 400
+    @include respond(small)
+        color: $color-6
+        background-color: rgba(237, 1, 127, .4)
+        border: none
+    &:hover 
+        color: $color-6
+        background-color: $color-8
+        border-color: $color-8
+
+.btn-4
+    @include respond(small)
+        color: $color-6
+        background-color: rgba(237, 1, 127, .2)
+        border-color: rgba(237, 1, 127, .2)
+    &:hover 
+        color: $color-6
+        background-color: $color-8
+        border-color: $color-8

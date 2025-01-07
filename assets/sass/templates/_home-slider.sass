@@ -1,0 +1,160 @@
+.home-slider
+    position: relative
+    &__wrap
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center 
+    &__img
+        position: absolute
+        bottom: 0
+        right: rem-calc(20)
+        max-width: rem-calc(905)
+        width: 100%
+        height: rem-calc(654)
+        z-index: -1
+        @include respond(small)
+            height: auto
+            right: 0
+            bottom: auto 
+            top: 25%
+        img
+            height: 100%
+            object-position: center 
+        &::after 
+            content: ""
+            position: absolute
+            top: rem-calc(-114)
+            right: rem-calc(22)
+            background-color: $color-10
+            max-width: rem-calc(710)
+            width: 100%
+            height: rem-calc(682)
+            z-index: -1
+            @include respond(medium)
+                top: rem-calc(-95)
+            @include respond(small)
+                height: 100%
+                max-width: 80%
+                right: rem-calc(15)
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        min-height: rem-calc(781)
+        padding-top: rem-calc(50)
+        padding-bottom: rem-calc(50)
+        @include respond(small)
+            min-height: rem-calc(400)
+    &__title
+        font-size: rem-calc(63)
+        line-height: 1.07936507937
+        font-weight: 900
+        color: $color-1
+        max-width: rem-calc(500)
+        margin-top: rem-calc(163)
+        @include respond(small)
+            margin-top: unset
+            font-size: rem-calc(36)
+            max-width: rem-calc(370)
+    &__info
+        margin-top: rem-calc(23)
+        max-width: rem-calc(380)
+        >p+p
+            margin-top: rem-calc(15)
+    &__text
+        font-size: rem-calc(16)
+        font-weight: 500
+        line-height: 1.375
+        color: $color-3
+    &__btns
+        display: flex
+        gap: rem-calc(20)
+        margin-top: rem-calc(38)
+        @media (max-width: 479px)
+            display: flex
+            flex-direction: column
+        .btn__wrap
+            font-weight: 600
+            padding: rem-calc(13 21)
+            text-transform: uppercase
+            @media (max-width: 479px)
+                text-align: center
+    .slick-dots
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        gap: rem-calc(18)
+        position: absolute
+        right: rem-calc(87)
+        top: 60.18%
+        @include respond(small)
+            flex-direction: row
+            top: auto
+            bottom: rem-calc(10)
+            right: auto
+            width: 100%
+        >li
+            display: flex
+            justify-content: center
+            align-items: center
+            width: rem-calc(8)
+            height: rem-calc(8)
+            border-radius: 50%
+            cursor: pointer
+            transition: all .3s ease 0s
+            background-color: $color-4
+            >button
+                font-size: 0
+        >li.slick-active
+            width: rem-calc(13)
+            height: rem-calc(13)
+            background-color: $color-8
+    .slick-arrow
+        position: absolute
+        top: 50%
+        z-index: 1
+        transform: translateY(-50%)
+        font-size: rem-calc(32)
+        transition: all .3s ease 0s
+        &:hover
+            opacity: .4
+        &.slick-next
+            left: rem-calc(15)
+        &.slick-prev
+            right: rem-calc(15)
+    &__contacts
+        display: flex
+        align-items: center
+        gap: rem-calc(20 36)
+        margin-top: rem-calc(185)
+        @include respond(small)
+            flex-direction: column
+            align-items: flex-start
+            margin-top: rem-calc(40)
+    &__phone
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            right: rem-calc(-18)
+            top: 0
+            width: rem-calc(1)
+            height: 100%
+            background-color: $color-4
+            @include respond(small)
+                display: none
+    &__icon-1
+        top: rem-calc(29)
+        left: rem-calc(100)
+        @include respond(medium)
+            top: 0
+        @include respond(small)
+            display: none
+    &__icon-2
+        padding: rem-calc(21 30)
+        top: rem-calc(142)
+        right: rem-calc(85)
+        @include respond(small)
+            display: none

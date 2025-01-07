@@ -1,0 +1,45 @@
+.glance
+    .grid-x
+        @include respond(small)
+            flex-direction: column-reverse
+    .cell
+        @include respond(medium)
+            display: flex
+            align-items: center
+    &__img
+        max-width: 85.833333%
+        height: 100%
+        @include respond(small)
+            max-width: 100%
+            width: 100%
+        img
+            height: 100%
+    &__wrap
+        max-width: rem-calc(455)
+        width: 100%
+        margin-top: rem-calc(140)
+        margin-left: rem-calc(7)
+        @include respond(medium)
+            margin-left: unset
+            margin-top: rem-calc(60)
+            margin-bottom: rem-calc(60)
+        @include respond(small)
+            padding-left: rem-calc(15)
+            padding-right: rem-calc(15)
+            max-width: 100%
+    &__title
+        font-size: rem-calc(32)
+        font-weight: 700
+        line-height: 1.1875
+        color: $color-2
+        text-transform: uppercase
+        @include respond(small)
+            font-size: rem-calc(28)
+    &__info
+        font-size: rem-calc(16)
+        font-weight: 500
+        line-height: 1.8125
+        color: $color-3
+        margin-top: rem-calc(10)
+    &__btn
+        margin-top: rem-calc(45)

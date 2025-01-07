@@ -1,0 +1,31 @@
+.results
+    padding-top: rem-calc(106)
+    padding-bottom: rem-calc(108)
+    @include respond(medium)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    @include respond(small)
+        padding-top: rem-calc(60)
+        padding-bottom: rem-calc(60)
+    &__info
+        max-width: rem-calc(548)
+    &__wrap
+        margin-top: rem-calc(84)
+        @include respond(medium)
+            margin-top: rem-calc(60)
+        .grid-x
+            row-gap: rem-calc(55)
+            @include respond(small)
+                row-gap: rem-calc(30)
+            @media (max-width: 479px)
+                flex-direction: column
+    &__box
+        max-width: rem-calc(172)
+        width: 100%
+        @include respond(medium)
+            margin: 0 auto
+        @include respond(small)
+            max-width: 100%
+        @media (max-width: 479px)
+            max-width: 100%
+            text-align: center
