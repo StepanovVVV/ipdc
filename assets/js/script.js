@@ -192,17 +192,21 @@ $('.partners__slick').slick({
 });
 
 // For active form
-const input = document.querySelector('.form__input');
-const label = document.querySelector('.form__label');
+const inputs = document.querySelectorAll('.form__input');
+const labels = document.querySelectorAll('.form__label');
 
-input.addEventListener('focus', function() {
-    label.classList.add('active');
-});
+inputs.forEach((input, index) => {
+    const label = labels[index];
 
-input.addEventListener('blur', function() {
-    if (input.value === '') {
-        label.classList.remove('active');
-    }
+    input.addEventListener('focus', function() {
+        label.classList.add('active');
+    });
+
+    input.addEventListener('blur', function() {
+        if (input.value === '') {
+            label.classList.remove('active');
+        }
+    });
 });
 
 // Add class for header scroll
