@@ -1,14 +1,3 @@
-// -------------------- DEFAULT --------------------
-$base-font-size: 10px
-
-html
-  font-size: $base-font-size
-// -------------------- DEFAULT --------------------
-
-// -------------------- FOR THE WIDTH OF THE CONTAINER AS IN THE LAYOUT --------------------
-$width-container: 1200px
-// -------------------- FOR THE WIDTH OF THE CONTAINER AS IN THE LAYOUT --------------------
-
 // -------------------- CONVERT PX TO REM --------------------
 @function rem-calc($values...)
   $result: ()
@@ -33,21 +22,3 @@ $width-container: 1200px
       $result: append($result, $value) 
   @return $result
 // -------------------- CONVERT PX TO REM --------------------
-
-// -------------------- FOR CONTAINER CALCULATION --------------------
-@function px-to-rem($px, $base: 10px) 
-  @return ($px / $base) + rem
-
-$width-container-rem: px-to-rem($width-container) 
-
-.grid-container 
-  max-width: $width-container-rem 
-// -------------------- FOR CONTAINER CALCULATION --------------------
-
-// -------------------- TO LOAD THE PAGE --------------------
-body.hidden 
-  opacity: 0
-  transition: opacity 0.2s ease
-  @include respond(small)
-    opacity: 1
-// -------------------- TO LOAD THE PAGE --------------------
