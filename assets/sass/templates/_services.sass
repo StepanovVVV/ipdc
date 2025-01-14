@@ -1,0 +1,18 @@
+.services
+    padding-top: rem-calc(106)
+    padding-bottom: rem-calc(130)
+    @include respond(medium)
+        padding-top: rem-calc(80)
+        padding-bottom: rem-calc(80)
+    @include respond(small)
+        padding-top: rem-calc(60)
+        padding-bottom: rem-calc(60)
+    &__wrap
+        margin-top: rem-calc(64)
+        @include respond(medium)
+            margin-top: rem-calc(40)
+        .grid-x
+            @media (max-width: 479px)
+                display: block
+                >div+div
+                    margin-top: rem-calc(40)
